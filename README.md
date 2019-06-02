@@ -10,3 +10,14 @@
 2. 编辑插件，修改`config.php` 的配置文件，填入你的[极验配置](https://gtaccount.geetest.com/sensebot/overview/)
 3. 启用插件
 
+
+## 注意事项
+
+<details>
+<summary>注意事项当然要点开看了，不点怎么注意，点击查看</summary>
+
+ 1. 插件没有设置页面
+ 2. `layer`和`jquery`默认引用`CDN`外链，如果失效请手动修改去掉注释
+ 3. 极验验证码位置`css`样式不兼容的话需要自己调
+ 
+</details>
