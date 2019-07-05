@@ -21,3 +21,25 @@
  3. 极验验证码位置`css`样式不兼容的话需要自己调
  
 </details>
+
+## 自定义验证
+
+只验证了正常`get`情况下的请求，所以机器人或恶意用户可以直接使用`post`请求跳过极验验证，所以需要自定义验证，可使用以下钩子增加验证
+
+```php
+// 增加登录时的验证
+function add_geetest_login_val() {
+    if (!empty($_POST)){
+        // 自定义内容省略
+    }
+}
+add_action('login_form_login','add_geetest_login_val');
+
+// 增加提交评论时的验证
+function add_geetest_comment_val() {
+	if (!empty($_POST)){
+        // 自定义内容省略
+    }
+}
+add_filter('preprocess_comment', 'add_geetest_comment_val');
+```
