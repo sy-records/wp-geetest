@@ -25,14 +25,15 @@ function add_captcha_style(){
 }
 add_action('login_form','add_captcha_style');
 
-function add_geetest_login_val() {
-    if (!empty($_POST)){
-        if (!$_POST['geetest_challenge'] || !$_POST['geetest_validate'] || !$_POST['geetest_seccode']) {
-            return  new WP_Error('broke', __("验证未通过"));
-        }
-    }
-}
-add_action('login_form_login','add_geetest_login_val');
+// post登录验证实例
+// function add_geetest_login_val() {
+//     if (!empty($_POST)){
+//         if (!$_POST['geetest_challenge'] || !$_POST['geetest_validate'] || !$_POST['geetest_seccode']) {
+//             return  new WP_Error('broke', __("验证未通过"));
+//         }
+//     }
+// }
+// add_action('login_form_login','add_geetest_login_val');
 
 function add_login_captcha_API1(){
     echo '<script>
