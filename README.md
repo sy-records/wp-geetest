@@ -36,10 +36,12 @@ function add_geetest_login_val() {
 add_action('login_form_login','add_geetest_login_val');
 
 // 增加提交评论时的验证
-function add_geetest_comment_val() {
-	if (!empty($_POST)){
+function add_geetest_comment_val($incoming_comment) {
+		if (!empty($_POST)){
         // 自定义内容省略
     }
+		// 评论需要返回数据
+		return $incoming_comment;
 }
 add_filter('preprocess_comment', 'add_geetest_comment_val');
 ```
