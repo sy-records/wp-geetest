@@ -24,8 +24,10 @@ function add_captcha_style(){
     echo '<div id="embed-captcha" style="margin: 0 0 1em 0"></div>';
 }
 add_action('login_form','add_captcha_style');
-//在忘记密码页面也显示极验证
+//在忘记密码页面显示极验证
 add_action('lostpassword_form','add_captcha_style');
+//在重置新密码页面显示极验证
+add_action('resetpass_form','add_captcha_style');
 
 // post登录验证实例
 // function add_geetest_login_val() {
