@@ -3,7 +3,7 @@
 Plugin Name:  wp-geetest
 Plugin URI:   https://github.com/sy-records/wp-geetest
 Description:  基于极验3.0，在WordPress的登录和评论时加入极验验证。
-Version:      1.0.1
+Version:      1.0.2
 Author:       沈唁志
 Author URI:   https://qq52o.me
 License:      Apache 2.0
